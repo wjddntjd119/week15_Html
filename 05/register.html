@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+  <style>
+    #container {
+      font-weight: 1000;
+    }
+    input[type="text"], input[type="password"], input[type="email"] {
+        width:300px;
+        height:30px;
+    }
+    #buttons {
+        width:400px;
+        margin:20px auto;
+        text-align: center;
+    }
+    #buttons input {
+        width:130px;
+        height:50px;
+        font-size:20px;
+        font-weight: 1000;
+    }
+    select {
+        width:100px;
+        height:30px;
+    }
+    label{
+        width:180px;
+        line-height: 35px;
+        float:left;
+    }
+    
+  </style>
+</head>
+<body>
+    <h1>회원 가입을 환영합니다</h1>
+    <div id="container">
+        <form>
+            <fieldset class="main">
+                <legend>사용자 정보</legend>
+                <label for="user_name" class="main2">아이디</label>
+                <input type="text" id="user_name"autofocus placeholder="4자 ~10자 사이, 공백없이"required><br><br>
+        
+                <label for="emal"class="main2">이메일</label>
+                <input type="text" id="email"required><br><br>
+        
+                <label for="pw"class="main2">비밀번호</label>
+                <input type="password" id="pw"placeholder="문자와 숫자, 특수 기호 포함"required><br><br>
+        
+                <label for="pw2"class="main2">비밀번호 확인</label>
+                <input type="password" id="pw2"required><br><br>
+        
+                <label for="selection"class="main2">가입 경로</label>
+                <select id="selection">
+                    <option value="blog" selected>블로그</option>
+                    <option value="sear">검색</option>
+                    <option value="sns">SNS</option>
+                    <option value="etc">기타</option>
+                </select>
+                <br><br>
+        
+                <label for="memo"class="main2">메모</label>
+                <textarea cols="40" rows="4" placeholder="남길 말씀이 있다면 여기에"></textarea>
+                
+            </fieldset>
+            <br>
+            
+            <fieldset id="ok">
+                <legend><b>이벤트와 새로운 소식</b></legend>
+                <label><input type="radio" id="s">메일 수신</label>
+                <label><input type="radio" id="s_n" checked>메일 수신 안 함</label>
+            </fieldset>
+            <div id="buttons">
+                <input type="submit" value="가입하기">
+            <input type="reset" value="취소">
+            </div>
+          </form>
+
+    </div>
+  
+    
+</body>
+</html>
