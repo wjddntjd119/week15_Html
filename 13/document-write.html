@@ -7,8 +7,28 @@
 </head>
 <body>
 	<h1>제목</h1>
+	<span id="text"></span>
 	<script>
-		document.write("<h1>어서오세요</h1>");
+		var a=2;
+		console.log("a값은 " + a);
+		//if(a === undefined)
+/*
+		let a2 =2;
+		if(a2===2){
+			v1 =2;
+			let a1 =1;
+
+			if(a1){
+				let a3 = 3;
+				console. log(a3);
+			}
+		}
+*/
+		const number = prompt("값을 입력해주세요");
+		const spanElement = document.getElementById("text");
+		if(num%3 ===0){
+			spanElement.innerText = ' 입력값 [$number]은 3의 배수입니다';
+		}
 	</script>
 </body>
 </html>

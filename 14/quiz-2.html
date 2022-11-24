@@ -10,8 +10,31 @@
 			text-align:center;
 		}
 	</style>
+	
 </head>
 <body>
-	<h2>3의 배수 찾기</h2>
+	<h2>7의 배수 찾기</h2><br>
+	<span id="a"></span>
+	<script>
+		while(1){
+			const number = parseInt(prompt("숫자를 입력하세요."));
+			const span = document.getElementById("a");
+
+			if(Number(number)){
+				if(number % 7 ===0){
+				span.innerText= `${number}(은)는 7의 배수가 맞습니다.`;
+				break;
+			}else{
+				span.innerText= `${number}(은)는 7의 배수가 아닙니다.`;
+				break;
+			}
+			}else{
+				alert("숫자를 입력해주세요")
+				continue;
+			}
+		}
+		
+	</script>
+	
 </body>
 </html>
