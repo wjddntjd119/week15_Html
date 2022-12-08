@@ -14,7 +14,8 @@ const setStudentNumberInnerHtml = (value) => {
 const setStudentEmailInnerHtml = (value) => {
   emailElement.textContent = value;
 };
-var emailTest = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+const emailTest = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
 
 //변경된 값 유지
 if (localstudentNumber) {
@@ -41,8 +42,8 @@ studentNumberElement.onclick = () => {
 
 emailElement.onclick = () => {
   while(1) {
-    const studentemail = prompt('학번을 입력해주세요.');
-    if(emailTest.text(studentemail)) {
+    const studentemail = prompt('이메일을 입력해주세요.');
+    if(emailcheck(studentemail) == true) {
       localStorage.setItem('studentemail', studentemail);
       setStudentEmailInnerHtml(studentemail);
       break;
@@ -52,6 +53,9 @@ emailElement.onclick = () => {
     }
   }
 };
+function emailcheck(email){
+  return(emailTest.test(email));
+}
 
 
 
