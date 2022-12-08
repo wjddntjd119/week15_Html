@@ -148,6 +148,12 @@ div.contents > div.user-name {
 #name{
   cursor: pointer;
 }
+#studentNumber{
+  cursor: pointer;
+}
+#email{
+  cursor: pointer;
+}
 
 div.contents > div.user-email {
   width: 329px;
