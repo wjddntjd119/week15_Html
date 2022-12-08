@@ -1,25 +1,23 @@
-//다른 파일에서 특정 클래스명 불러오기
+const headeruserNameElement = document.querySelector('.user');
 
-const headerUserNameElement = document.querySelector('.user');
+const localuserName = localStorage.getItem('userName');
+const userNameElement = document.querySelector('#name');
 
-const userNameElement = document.querySelector('.user-name');
-
-const localUserName = localStorage.getItem('userName');
-
-const setUserNameInnerHTML = (name) => {
-  headerUserNameElement.innerHTML = `${name} <span>님</span>`;
-  userNameElement.innerHTML = `${name} <span>님</span>`;
+const setUserNameInnerHtml = (name) => {
+  headeruserNameElement.innerHTML = `${name}<span>님</span>`;
+  userNameElement.textContent = name;
 };
 
-if (localUserName) {
-  setUserNameInnerHTML(localUserName);
+if (localuserName) {
+  setUserNameInnerHtml(localuserName);
 }
 
-userNameElement.onclick = () =>{
-  const userName = prompt('이름을 입력해주세요');
-  //username에 대한 유효성 검사 잇으면 좋다
+// eslint-disable-next-line max-len
+// userNameElement.innerHTML = `${localStorage.getItem('userName')}<span>님</span>`;
 
-  localStorage.setItem('userName', userName);
+userNameElement.onclick = () => {
+  const userName = prompt('이름을 입력해 주세요');
+  localStorage.setItem('userName', userName); // 새로고침을 해도 값이 유지됨
 
-  setUserNameInnerHTML(userName);
+  setUserNameInnerHtml(userName);
 };

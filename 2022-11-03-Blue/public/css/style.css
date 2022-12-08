@@ -143,6 +143,9 @@ div.contents > div.user-name {
 
   color: #000000;
 
+  
+}
+#name{
   cursor: pointer;
 }
 
